@@ -1,0 +1,247 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    --color1: #000;
+    --color2: #2B8EAD;
+    --color3: #333;
+    --color4: #6F98A8;
+    --color5: #FFF;
+    --color6: #BFBFBF;
+    --color7: #EFEFEF;
+    --color8: #2F454E;
+    --color9: #72C3DC;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.msg {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    font-size: 1.5rem;
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
+footer {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--color1);
+}
+
+.container {
+    background-color: var(--color7);
+    display: flex;
+    height: 80vh;
+}
+
+.game {
+    display: flex;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+.game__block {
+    flex: 1 1 33.33%;
+    height: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color5);
+    font-size: 2rem;
+    position: relative;
+}
+
+.button {
+    color: var(--color5);
+    background-color: var(--color9);
+    font-size: 0.8rem;
+    width: 80%;
+    height: 5vh;
+    margin: 2vh auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 1vh 1vh var(--color4);
+}
+
+.game__block--color1 {
+    background-color: var(--color4);
+}
+
+.game__block--color2 {
+    background-color: var(--color2);
+}
+
+.game__block--color3 {
+    background-color: var(--color3);
+}
+
+.game__block--color4 {
+    background-color: var(--color4);
+}
+
+.game__block--color5 {
+    background-color: var(--color3);
+}
+
+.game__block--color6 {
+    background-color: var(--color6);
+}
+
+.game__block--color7 {
+    background-color: var(--color6);
+}
+
+.game__block--color8 {
+    background-color: var(--color9);
+}
+
+.game__block--color9 {
+    background-color: var(--color3);
+}
+
+
+.game__block--color1:after {
+    position: absolute;
+    content: '1';
+}
+
+.game__block--color2:after {
+    position: absolute;
+    content: '2';
+}
+
+.game__block--color3:after {
+    position: absolute;
+    content: '3';
+}
+
+.game__block--color4:after {
+    position: absolute;
+    content: '4';
+}
+
+.game__block--color5:after {
+    position: absolute;
+    content: '5';
+}
+
+.game__block--color6:after {
+    position: absolute;
+    content: '6';
+}
+
+.game__block--color7:after {
+    position: absolute;
+    content: '7';
+}
+
+
+.game__block--color8:after {
+    position: absolute;
+    content: '8';
+}
+
+.game__block--color9:after {
+    position: absolute;
+    content: '9';
+}
+
+@media all and (max-width: 500px) {
+    header {
+        color: var(--color5);
+        background-color: var(--color1);
+    }
+    .container {
+        flex-direction: column-reverse;
+        background-color: var(--color5);
+    }
+    .game {
+        margin: 0 10vw;
+        height: 90vh;
+    }
+
+    .game__block {
+        height: 6.5vh;
+        flex: 1 1 100%;
+        background-color: var(--color7);
+        color: var(--color1);
+    }
+
+    .game__block::before {
+        width: 2vw;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        content: '';
+    }
+
+    .buttons {
+        flex-direction: row;
+        width: 80%;
+        height: 10vh;
+        margin: 0 auto;
+    }
+
+    .button {
+        flex: 1 1 30%;
+        max-width: 30%;
+    }
+
+    .game__block--color1::before {
+        background-color: var(--color4);
+    }
+    
+    .game__block--color2::before {
+        background-color: var(--color2);
+    }
+    
+    .game__block--color3::before {
+        background-color: var(--color3);
+    }
+    
+    .game__block--color4::before {
+        background-color: var(--color4);
+    }
+    
+    .game__block--color5::before {
+        background-color: var(--color3);
+    }
+    
+    .game__block--color6::before {
+        background-color: var(--color6);
+    }
+    
+    .game__block--color7::before {
+        background-color: var(--color6);
+    }
+    
+    .game__block--color8::before {
+        background-color: var(--color9);
+    }
+    
+    .game__block--color9::before {
+        background-color: var(--color3);
+    }
+    
+}
